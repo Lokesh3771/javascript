@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Bordered form */
+form {
+  border: 3px solid #3b1010;
+  position: absolute;
+}
+.us{
+    font-size: 20px;
+    font-weight: 700;
+}
+.boox{
+    border: 20px;
+    /* text-align: center; */
+}
+
+    </style>
+</head>
+<body>
+    <form  class="boox " onsubmit="demo(event)">
+        <fieldset style="width: 400px;height: 200px;margin-top: 200px;margin-left: 450px;border-radius: 10px;">
+            <label for="uname"  class="us">Username:</label>
+            <input type="text" placeholder="enter Username" name="uname" id="user"><br><br>
+
+            <label for="psw"  class="us">Password:</label>
+            <input type="text" name="psw" placeholder="enter password"  id="pass"><br><br>
+
+            <label for="psw1" class="us">Confirm Password:</label>
+            <input type="text" name="psw1"  id="cpass" onchange="OTP()"><br><br>
+
+            <label for="otp" class="us">OTP</label>
+            <input type="text" name="otp" id="oTP"><br><br><br>
+
+            <button>submit<button>
+        </fieldset>
+    </form>
+     
+
+
+     
+</body>
+<script>
+        function demo(event){
+        event.preventDefault()
+        var a = document.getElementById("user").value 
+        var b = document.getElementById("pass").value
+        var c = document.getElementById("cpass").value
+        var d = document.getElementById("oTP").value
+        
+
+        if(a == "lokii" && b == "123" && c == b && d !=" "){
+            window.location.replace("login form continue.html")
+        }else{
+            alert("not sucess")
+        }
+        demo()
+        localStorage.setItem("a",a)
+
+    
+    }
+    function OTP(){
+        alert(Math.trunc(Math.random()*1000000))
+
+    }
+       </script>
+</html>

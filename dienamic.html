@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="demo1()">
+        <fieldset>
+            <legend>Login form</legend>
+            <label for="">Username</label>
+            <input type="text" name="" id="name"><br><br>
+
+            <label for="">password</label>
+            <input type="text" name="" id="password"><br><br>
+
+            <button>submit</button>
+
+
+        </fieldset>
+    </form>
+    
+</body>
+<script>
+    function demo1(){
+        var a = document.getElementById("name").value
+        var b = document.getElementById("password").value
+        localStorage.setItem("name",a)
+        localStorage.setItem("password",b)
+
+        var c = document.getElementById("name").value
+        var d = document.getElementById("password").value
+        if(a == c && b== d){
+            window.location.replace("show.html")
+        }else{
+            alert("wrong")
+        }
+}
+
+
+</script>
+</html>

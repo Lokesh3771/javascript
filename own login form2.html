@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="demo(event)">
+        <fieldset style="height: 180px;width: 400px; margin-left: 500px;margin-top: 300px;">
+            <legend>Login formmuh</legend>
+            <label for="usname" style="font-size: 30px;font-weight: 700;">Username:</label>
+            <input type="text" name="uss" id="user"><br><br>
+
+            <label for="pass"  style="font-size: 30px;font-weight: 700;">Password:</label>
+            <input type="text" name="pss" id="pass"><br><br>
+
+            <label for="Confirm"  style="font-size: 20px;font-weight: 700;">Confirm password:</label>
+            <input type="text" name="confirm" id="cpass"><br><br>
+
+            <button>submit</button>
+        </fieldset>
+    </form>
+    
+</body>
+<script>
+    function demo(event){
+        event.preventDefault()
+        let z = document.getElementById("user").value
+        let x = document.getElementById("pass").value
+        let y = document.getElementById("cpass").value
+
+        if(z == "lokesh" && x =="123" && y =="123"){
+            alert("sucess")
+        }else{
+            alert("Not sucess")
+        }
+        localStorage.setItem("k",z)
+    }
+
+</script>
+</html>
